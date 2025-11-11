@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick and Morty Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Rick and Morty Page</h1>
+    </header>
+
+    <section class="search-section">
+        <input type="text" placeholder="Search for a character..." id="search-input">
+    </section>
+
+    <section class="results-section">
+        <div id="results-container">
+            <template id="card-template">
+                <div class="character-card">
+                    <input type="hidden" class="character-id">
+                    <img src="" alt="Character Image" class="character-image">
+                    <h2 class="character-name"></h2>
+                    <button class="know-more">Know More</button>
+                </div>
+            </template>
+        </div>
+
+        <div id="know-more">
+            <div class="know-more-card">
+                <img src="" alt="Character Image" class="know-more-image">
+                <h2 class="know-more-name"></h2>
+                <p class="character-status"></p>
+                <p class="character-species"></p>
+                <p class="character-gender"></p>
+                <p class="character-location"></p>
+                <button id="close-know-more">Close</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
