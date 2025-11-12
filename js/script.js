@@ -1,5 +1,6 @@
 async function getAllCharacters() {
 
+    // This function fetches all characters from the Rick and Morty API and displays them on the page.
     const resultsContainer = document.getElementById('results-container');
     const url = 'https://rickandmortyapi.com/api/character';
     try {
@@ -25,6 +26,7 @@ async function getAllCharacters() {
 
 async function knowMore(characterId) {
 
+    // This function fetches detailed information about a specific character and displays it in a modal.
     const knowMoreModal = document.getElementById('know-more');
     knowMoreModal.style.display = 'block';
     characterId = parseInt(characterId);
@@ -42,7 +44,7 @@ async function knowMore(characterId) {
         document.querySelector('.character-species').textContent = `Species: ${characterInfo.species}`;
         document.querySelector('.character-gender').textContent = `Gender: ${characterInfo.gender}`;
         document.querySelector('.character-location').textContent = `Location: ${characterInfo.location.name}`;
-    }   catch(error) {
+    } catch(error) {
         console.error('Error fetching character details:', error);
     }
 }
@@ -50,6 +52,7 @@ async function knowMore(characterId) {
 document.getElementById('close-know-more').addEventListener('click', hideCharacterDetails);
 function hideCharacterDetails() {
     
+    // This function hides the character details modal and clears its content.
     document.querySelector('.know-more-image').src = '';
     document.querySelector('.know-more-image').alt = '';
     document.querySelector('.know-more-name').textContent = '';
@@ -65,9 +68,9 @@ const search = document.querySelector('#search-input');
 const resultsContainer = document.querySelector('#results-container');
 search.addEventListener('input', () => {
 
+    // This function filters the displayed character cards based on the search input.
     const searchValue = search.value.toLowerCase().trim();
     const cards = resultsContainer.querySelectorAll('.character-card');
-
     cards.forEach(card => {
         const nameElement = card.querySelector('.character-name');
 
