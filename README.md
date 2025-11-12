@@ -2,6 +2,10 @@
 
 This project is a simple web application that fetches and displays character data from the Rick and Morty API. Users can search for characters and view detailed information about each character in a modal popup.
 
+## GitHub Page
+You can view the live version of this project at:
+https://robisontorres.github.io/FrontAPI/
+
 ## Features
 - Fetches character data from the Rick and Morty API.
 - Displays character cards with images and names.
