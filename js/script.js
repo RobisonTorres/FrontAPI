@@ -9,6 +9,7 @@ async function getAllCharacters() {
             headers: { 'Content-Type': 'application/json' }
         });
         const data = await response.json();
+        console.log(data);
         data.results.forEach(character => {
             const template = document.getElementById('card-template');
             const clone = template.content.cloneNode(true);
@@ -37,6 +38,7 @@ async function knowMore(characterId) {
             headers: { 'Content-Type': 'application/json' }
         });
         const characterInfo = await response.json();
+        console.log(characterInfo);
         document.querySelector('.know-more-image').src = characterInfo.image;
         document.querySelector('.know-more-image').alt = characterInfo.name;
         document.querySelector('.know-more-name').textContent = characterInfo.name;
