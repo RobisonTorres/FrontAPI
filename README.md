@@ -4,7 +4,7 @@ This project is a simple web application that fetches and displays character dat
 
 ## GitHub Page
 You can view the live version of this project at:
-https://robisontorres.github.io/FrontAPI/
+https://robisontorres.github.io/RickAndMortyAPI/
 
 ## Features
 - Fetches character data from the Rick and Morty API.
